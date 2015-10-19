@@ -3,19 +3,19 @@
 
 //Example load mediaserverd
 
-BOOL is_mediaserverd()
+BOOL is_hook(NSString* name)
 {
 	NSArray *args = [[NSClassFromString(@"NSProcessInfo") processInfo] arguments];
 	NSUInteger count = args.count;
 	if (count != 0) {
 		NSString *executablePath = args[0];
-		return [[executablePath lastPathComponent] isEqualToString:@"mediaserverd"];
+		return [[executablePath lastPathComponent] isEqualToString:name];
 	}
 	return NO;
 }
 %ctor
 {
-	if (!is_mediaserverd()) {
-	  //Do some thing
+	if (is_hook(@"Viber")) {
+	  //Do some thing with Viber :D
 	}
 }
