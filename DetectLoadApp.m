@@ -1,10 +1,8 @@
 //hook UIKit to load all
 //Check app and load code 
-
 //Example load mediaserverd
 
-BOOL is_hook(NSString* name)
-{
+BOOL is_hook(NSString* name){
 	NSArray *args = [[NSClassFromString(@"NSProcessInfo") processInfo] arguments];
 	NSUInteger count = args.count;
 	if (count != 0) {
@@ -13,8 +11,7 @@ BOOL is_hook(NSString* name)
 	}
 	return NO;
 }
-%ctor
-{
+%ctor{
 	if (is_hook(@"Viber")) {
 	  //Do some thing with Viber :D
 	}
