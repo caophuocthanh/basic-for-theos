@@ -1,6 +1,10 @@
-//hook UIKit to load all
-//Check app and load code 
-//Example load mediaserverd
+
+//  Created by Otatime on 10/24/15.
+//  Copyright © 2015 Cao Phuoc Thanh. All rights reserved.
+//
+// hook UIKit to load all
+// Check app and load code 
+// Example load mediaserverd
 
 BOOL is_hook(NSString* name){
 	NSArray *args = [[NSClassFromString(@"NSProcessInfo") processInfo] arguments];
