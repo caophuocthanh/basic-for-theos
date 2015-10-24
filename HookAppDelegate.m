@@ -1,4 +1,7 @@
 
+//  Created by Otatime on 10/24/15.
+//  Copyright © 2015 Cao Phuoc Thanh. All rights reserved.
+//
 #import <objc/runtime.h>
 
 static IMP original_didReceiveLocalNotification;
